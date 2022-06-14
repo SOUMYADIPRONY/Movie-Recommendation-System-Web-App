@@ -61,10 +61,10 @@ st.set_page_config(
 )
 
 def run():
-    img1 = Image.open('./meta/logo.jpg')
-    img1 = img1.resize((250,250),)
+    img1 = Image.open('./meta/bg-image_2.jpg')
+    img1 = img1.resize((1080,720),)
     st.image(img1,use_column_width=False)
-    st.title("Movie Recommender System")
+    st.title("MoviesZilla")
     st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* Data is based "IMDB 5000 Movie Dataset"</h4>''',
                 unsafe_allow_html=True)
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
