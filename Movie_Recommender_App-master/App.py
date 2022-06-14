@@ -57,14 +57,14 @@ def KNN_Movie_Recommender(test_point, k):
     return table
 
 st.set_page_config(
-   page_title="MoviesZilla",
+   page_title="MovieZilla",
 )
 
 def run():
     img1 = Image.open('./meta/bg-image_2.jpg')
     img1 = img1.resize((1080,720),)
     st.image(img1,use_column_width=False)
-    st.title("MoviesZilla")
+    st.title("MovieZilla")
     st.markdown('''<h4 style='text-align: left; color: #d73b5c;'> Find the BEST Movies Handpicked From IMDB</h4>''',
                 unsafe_allow_html=True)
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
