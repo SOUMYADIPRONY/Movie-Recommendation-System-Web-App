@@ -57,7 +57,7 @@ def KNN_Movie_Recommender(test_point, k):
     return table
 
 st.set_page_config(
-   page_title="Movie Recommender System",
+   page_title="MoviesZilla",
 )
 
 def run():
@@ -65,7 +65,7 @@ def run():
     img1 = img1.resize((1080,720),)
     st.image(img1,use_column_width=False)
     st.title("MoviesZilla")
-    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'>* Data is based "IMDB 5000 Movie Dataset"</h4>''',
+    st.markdown('''<h4 style='text-align: left; color: #d73b5c;'> Find the BEST Movies Handpicked From IMDB</h4>''',
                 unsafe_allow_html=True)
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
               'Fantasy', 'Film-Noir', 'Game-Show', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'News',
@@ -90,7 +90,7 @@ def run():
                 table = KNN_Movie_Recommender(test_points, no_of_reco+1)
                 table.pop(0)
                 c = 0
-                st.success('Some of the movies from our Recommendation, have a look below')
+                st.success('Here are movies from our Recommendation, have a look below')
                 for movie, link, ratings in table:
                     c+=1
                     director,cast,story,total_rat = get_movie_info(link)
@@ -110,7 +110,7 @@ def run():
                 table = KNN_Movie_Recommender(test_points, no_of_reco+1)
                 table.pop(0)
                 c = 0
-                st.success('Some of the movies from our Recommendation, have a look below')
+                st.success('Here are the movies from our Recommendation, have a look below')
                 for movie, link, ratings in table:
                     c += 1
                     st.markdown(f"({c})[ {movie}]({link})")
@@ -134,7 +134,7 @@ def run():
                 test_point.append(imdb_score)
                 table = KNN_Movie_Recommender(test_point, no_of_reco)
                 c = 0
-                st.success('Some of the movies from our Recommendation, have a look below')
+                st.success('Here are movies from our Recommendation, have a look below')
                 for movie, link, ratings in table:
                     c += 1
                     st.markdown(f"({c})[ {movie}]({link})")
@@ -152,7 +152,7 @@ def run():
                 test_point.append(imdb_score)
                 table = KNN_Movie_Recommender(test_point, no_of_reco)
                 c = 0
-                st.success('Some of the movies from our Recommendation, have a look below')
+                st.success('Here are the movies from our Recommendation, have a look below')
                 for movie, link, ratings in table:
                     c += 1
                     st.markdown(f"({c})[ {movie}]({link})")
